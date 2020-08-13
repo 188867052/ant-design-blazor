@@ -22,8 +22,8 @@ steps:
     arguments: '-c Debug'
     zipAfterPublish: false
 
-- task: DockerInstaller@0 📦
-  displayName: Docker Installer
+- task: DockerInstaller@0 
+  displayName: Docker Installer 📦
   inputs:
     dockerVersion: '17.09.0-ce'
 
