@@ -54,4 +54,4 @@ steps:
   displayName: deploy to TencentCloud 🚀
   inputs:
     script: |
-      sshpass -p "$(TencentCloudPassword)" ssh -o StrictHostKeyChecking=no -t -t ubuntu@$(TencentCloudIP) bash -s < deploy.sh
+      sshpass -p "$(TencentCloudPassword)" ssh -o StrictHostKeyChecking=no -t -t ubuntu@$(TencentCloudIP) bash -s < deploy-server.sh

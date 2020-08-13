@@ -6,6 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Serilog" Version="2.9.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="3.4.0" />
+    <PackageReference Include="Serilog.Sinks.ColoredConsole" Version="3.0.1" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
+    <PackageReference Include="Serilog.Sinks.Elasticsearch" Version="8.2.0" />
+    <PackageReference Include="Serilog.Sinks.Literate" Version="3.0.0" />
     <ProjectReference Include="..\AntBlazor.Docs\AntDesign.Docs.csproj" />
   </ItemGroup>
 
