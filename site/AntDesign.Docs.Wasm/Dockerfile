@@ -1,16 +1,8 @@
-﻿FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
-WORKDIR /source
+﻿FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS base
+MAINTAINER cheng 542153354@qq.com
 
-# copy csproj and restore as distinct layers
-COPY *.csproj .
-RUN dotnet restore
-
-# copy and publish app and libraries
-COPY . .
-RUN dotnet publish -c release -o /app --no-restore
-
-# final stage/image
-FROM mcr.microsoft.com/dotnet/core/runtime:3.1
+ENV "ASPNETCORE_ENVIRONMENT"="Development"
 WORKDIR /app
-COPY --from=build /app .
+EXPOSE 80
+COPY ./bin/Debug/netstandard2.1/publish /app
 ENTRYPOINT ["./antdesign.docs.wasm"]
