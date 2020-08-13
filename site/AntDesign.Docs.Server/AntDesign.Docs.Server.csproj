@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MyExtentions" Version="1.0.0" />
     <PackageReference Include="Serilog" Version="2.9.0" />
     <PackageReference Include="Serilog.AspNetCore" Version="3.4.0" />
     <PackageReference Include="Serilog.Sinks.ColoredConsole" Version="3.0.1" />
@@ -23,9 +24,10 @@
     <DocFiles Include="$(SolutionDir)docs\**\*.*"></DocFiles>
   </ItemGroup>
   <ItemGroup>    
-    <Watch Include="$(SolutionDir)**\*.razor"   />
+    <Watch Include="$(SolutionDir)**\*.razor" />
   </ItemGroup>
   <Target Name="CopyDocs" BeforeTargets="Build">
     <Copy SourceFiles="@(DocFiles)" DestinationFolder="$(ProjectDir)\wwwroot\docs\%(RecursiveDir)" ContinueOnError="true" />
   </Target>
+  <ProjectExtensions><VisualStudio><UserProperties properties_4launchsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 </Project>

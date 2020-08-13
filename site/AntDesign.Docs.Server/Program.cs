@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Serilog;
-using Shared.Startups;
 
 namespace AntDesign.Docs.Server
 {
@@ -12,7 +11,7 @@ namespace AntDesign.Docs.Server
         {
             try
             {
-                LogExtentions.ConfigureSerilog($"{nameof(AntDesign)}-{{0:yyyy.MM.dd}}");
+                MyExtentions.Elasticsearch.ConfigureSerilog(nameof(AntDesign));
 
                 Log.Information("Starting host...");
                 CreateHostBuilder(args).Build().Run();
