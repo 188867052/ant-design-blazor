@@ -42,13 +42,13 @@ steps:
   displayName: Docker build
   inputs:
     command: 'build'
-    Dockerfile: '**/AntDesign.Docs.Wasm/Dockerfile'
-    arguments: '-t 542153354/antdesign.docs.wasm:v1.0'
+    Dockerfile: '**/AntDesign.Docs.Server/Dockerfile'
+    arguments: '-t 542153354/antdesign.docs.server:v1.0'
 
 - task: CmdLine@2
   displayName: Docker push
   inputs:
-    script: 'docker push 542153354/antdesign.docs.wasm:v1.0'
+    script: 'docker push 542153354/antdesign.docs.server:v1.0'
 
 - task: CmdLine@2
   displayName: deploy to TencentCloud 🚀
