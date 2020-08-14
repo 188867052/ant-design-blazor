@@ -5,11 +5,11 @@ WORKDIR /src
 # Copy csproj and sln and restore as distinct layers
 COPY site/AntDesign.Docs.Server/*.csproj site/AntDesign.Docs.Server/
 COPY site/AntDesign.Docs.Wasm/*.csproj site/AntDesign.Docs.Wasm/
-COPY site/AntDesign.Docs.WasmHost/*.csproj site/AntDesign.Server/
+COPY site/AntDesign.Docs.WasmHost/*.csproj site/AntDesign.Docs.WasmHost/
 COPY site/AntBlazor.Docs/*.csproj site/AntBlazor.Docs/
 COPY site/AntDesign.Docs.Build.CLI/*.csproj site/AntDesign.Docs.Build.CLI/
-COPY tests/*.csproj tests/AntDesign.Tests/
-COPY components/*.csproj .
+COPY tests/*.csproj tests/
+COPY components/*.csproj components/
 COPY AntDesign.sln .
 RUN dotnet restore
 
