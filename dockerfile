@@ -6,7 +6,7 @@ WORKDIR /src
 COPY site/AntDesign.Docs.Server/*.csproj AntDesign.Docs.Server/
 COPY site/AntDesign.Docs.Wasm/*.csproj AntDesign.Docs.Wasm/
 COPY site/AntDesign.Docs.WasmHost/*.csproj AntDesign.Server/
-COPY site/AntBlazor.Docs/*.csproj AntDesign.Docs/
+COPY site/AntBlazor.Docs/*.csproj AntBlazor.Docs/
 COPY site/AntDesign.Docs.Build.CLI/*.csproj AntDesign.Docs.Build.CLI/
 COPY tests/*.csproj AntDesign.Tests/
 COPY components/*.csproj .
