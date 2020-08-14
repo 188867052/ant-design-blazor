@@ -8,6 +8,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Solution Items", "_Solutio
 		.editorconfig = .editorconfig
 		azure-pipelines.yml = azure-pipelines.yml
 		deploy-server.sh = deploy-server.sh
+		dockerfile = dockerfile
 		.github\workflows\gh-pages.yml = .github\workflows\gh-pages.yml
 		README.md = README.md
 		.github\workflows\style-sync.yml = .github\workflows\style-sync.yml

@@ -9,18 +9,7 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-variables:
-  buildConfiguration: 'Debug'
-
 steps:
-- task: DotNetCoreCLI@2
-  displayName: DotNetCore publish 🎉
-  inputs:
-    command: 'publish'
-    publishWebProjects: false
-    projects: '**/*.csproj'
-    arguments: '-c Debug'
-    zipAfterPublish: false
 
 - task: DockerInstaller@0 
   displayName: Docker Installer 📦
@@ -42,7 +31,7 @@ steps:
   displayName: Docker build
   inputs:
     command: 'build'
-    Dockerfile: '**/AntDesign.Docs.Server/Dockerfile'
+    Dockerfile: '$(Build.SourcesDirectory)/dockerfile'
     arguments: '-t 542153354/antdesign.docs.server:v1.0'
 
 - task: CmdLine@2
