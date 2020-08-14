@@ -15,7 +15,7 @@ RUN dotnet restore
 
 ### BUILD
 COPY . .
-RUN dotnet build "site/AntDesign.Docs.Server/AntDesign.Docs.Server.csproj" -c Release -o /app
+RUN dotnet build "AntDesign.sln" -c Release -o /app
 
 ### PUBLISH
 FROM build as publish
