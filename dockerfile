@@ -8,8 +8,8 @@ COPY site/AntDesign.Docs.Wasm/*.csproj AntDesign.Docs.Wasm/
 COPY site/AntDesign.Docs.WasmHost/*.csproj AntDesign.Server/
 COPY site/AntDesign.Docs/*.csproj AntDesign.Docs/
 COPY site/AntDesign.Docs.Build.CLI/*.csproj AntDesign.Docs.Build.CLI/
-COPY tests/AntDesign.Tests/*.csproj AntDesign.Tests/
-COPY components/AntDesign.sln .
+#COPY tests/AntDesign.Tests/*.csproj AntDesign.Tests/
+#COPY components/AntDesign.sln .
 RUN dotnet restore
 
 ### BUILD
